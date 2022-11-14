@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
+
  const BoredAPI = () =>{
-    const[activity, setActivity] = useState(null);
-    const[loading, setLoading] = useState(true);
+    const[activity, setActivity] = useState({});
+    //const[loading, setLoading] = useState(true); // DO NOT DO
     useEffect(() =>{
         fetch('https://www.boredapi.com/api/activity')
         .then((response) => response.json())
-        .then((json) => setActivity(json));
-
-        if(activity)
-        setLoading(false);
-    }, activity)
+        .then((json) => setActivity(json));    
+    }, [])
     
-
+    if(activity){
+        //setLoading(() => { return false;}); // DO NOT DO
+        // console.log(activity)
+        var loading = false
+        }
     return(
         <div>
             <p>BoredAPI</p>
