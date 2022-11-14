@@ -1,0 +1,14 @@
+### Get all Cryptids
+GET http://localhost:8080/cryptid
+
+### Get Cryptid by Id
+GET http://localhost:8080/cryptid/1
+###
+GET http://localhost:8080/cryptid/2
+###
+GET http://localhost:8080/cryptid/4
+###
+GET http://localhost:8080/cryptid/6
+
+### Get Random Cryptid
+GET http://localhost:8080/random/cryptid
