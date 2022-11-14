@@ -18,9 +18,8 @@ public class Populator implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         //list of cryptids to include:
-        //griffin, bigfoot, Loch Ness Monster, Yeti, Vampire, Thunder Bird,
+        //griffin, bigfoot, Loch Ness Monster, Yeti, Vampire, Thunder Bird, jersey devil
 
-        //jersy devil
 
         //descriptions from wikipedia
         Cryptid griffin = new Cryptid("Griffin", "A legendary creature with the body, tail, and back legs of a lion; the head and wings of an eagle; and sometimes an eagle's talons as its front feet. ");
@@ -35,6 +34,9 @@ public class Populator implements CommandLineRunner {
         cryptidRepo.save(vampire);
         Cryptid thunderBird = new Cryptid("Thunder Bird", "A legendary creature in certain North American indigenous peoples' history and culture. It is considered a supernatural being of power and strength.");
         cryptidRepo.save(thunderBird);
+        Cryptid jerseyDevil = new Cryptid("Jersey Devil", "The Jersey Devil (also known as the Leeds Devil) is a legendary creature said to inhabit the forest of Pine Barrens in South Jersey. The creature is often described as a flying biped with hooves.");
+        cryptidRepo.save(jerseyDevil);
+
 
         //if you add more cryptids, be sure to update the cryptidCount in CryptidController getRandomCryptid()!
 
