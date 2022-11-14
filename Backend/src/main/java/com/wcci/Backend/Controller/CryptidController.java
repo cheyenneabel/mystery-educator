@@ -37,7 +37,9 @@ public class CryptidController {
     @GetMapping("/random/cryptid")
     public Cryptid getRandomCryptid(){
 
-        int cryptidCount = 6;
+        // ▼ ▼ ▼ ▼ ▼ ▼ ▼
+        int cryptidCount = 7;
+        // ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
         long random = (long)(Math.floor(Math.random()*cryptidCount)+1);
         return cryptidRepo.findById(random).get();
