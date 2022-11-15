@@ -1,14 +1,25 @@
+import { BrowserRouter } from 'react-router-dom';
 import Footer from './Components/Footer.js'
 import Header from './Components/Header.js';
+import PageSwitch from './PageSwitch.js';
 
 function App() {
   return (
+
     <div className="App">
-        <Header/>
-        <div className="page">
-        </div>
-        <Footer /> 
+      <BrowserRouter>
+
+          <Header/>
+
+          <div className="page">
+            <PageSwitch />
+          </div>
+
+          <Footer /> 
+          
+        </BrowserRouter>
     </div>
+
   );
 }
 

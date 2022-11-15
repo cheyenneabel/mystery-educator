@@ -5,4 +5,4 @@ const jacContactPage = () => {
     const[users, setUser] = useState(null);
     
 ;}
-export default jacContactPage
+export default jacContactPage;
