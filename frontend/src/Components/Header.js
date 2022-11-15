@@ -6,10 +6,10 @@ const Header = () => (
         <h1>React Fetch Demo</h1>
         <ul>
             <NavLink to='/'>Home</NavLink>
-            <NavLink to='/users'>Users</NavLink>
+            <NavLink to='/javengers'>Javengers</NavLink>
         </ul>
     </div>
     
 )
 
-export default Header
+export default Header;
