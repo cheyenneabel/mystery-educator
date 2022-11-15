@@ -9,7 +9,7 @@ function App() {
   return (
 
     <div className="App">
-      <BoredAPI></BoredAPI>
+      {/* <BoredAPI></BoredAPI> */}
       <BrowserRouter>
 
           <Header/>

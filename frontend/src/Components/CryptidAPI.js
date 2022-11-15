@@ -1,11 +1,21 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 
-const Cryptid = () => (
-    <div>
+const Cryptid = () => {
+    const [creature, setCreature] = useState({})
 
-    </div>
+    useEffect(() => {
+        fetch('http://localhost:8080/cryptid')
+        .then()
+    })
 
-)
+    return(
+        <div>
+
+        </div>
+    )
+}
+
+
 
 export default Cryptid;
