@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-const PlaceholderAPIPage = () => {
+const BoredAPIPage = () => {
 
-    const [info, setInfo] = useState(null);
+    const [stuff, setStuff] = useState(null);
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then((response) => response.json())
-        .then((json) => setInfo(json));
+        .then((json) => setStuff(json));
     })
 
     return (
@@ -18,4 +18,4 @@ const PlaceholderAPIPage = () => {
     )
 }
 
-export default PlaceholderAPIPage
+export default BoredAPIPage
