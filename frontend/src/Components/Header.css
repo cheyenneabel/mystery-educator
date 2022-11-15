@@ -1,0 +1,27 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+}
+
+ul{
+    display:flex;
+
+}
+
+ul a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:1px solid black;
+    border-radius: 75px;
+    margin: 10px;
+    min-width: 75px;
+    padding: 2px;
+    text-decoration: none;
+}
+
+ul a:hover{
+    background-color: orange;
+    transition: .25s;
+}
