@@ -10,6 +10,7 @@ function App() {
 
     <div className="App">
       {/* <BoredAPI></BoredAPI> */}
+      
       <BrowserRouter>
 
           <Header/>
