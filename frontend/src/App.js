@@ -5,11 +5,12 @@ import Footer from './Components/Footer.js'
 import Header from './Components/Header.js';
 import PageSwitch from './PageSwitch.js';
 
+
 function App() {
   return (
 
     <div className="App">
-      {/* <BoredAPI></BoredAPI> */}
+      
       
       <BrowserRouter>
 
@@ -21,6 +22,7 @@ function App() {
 
           <Footer /> 
           
+
         </BrowserRouter>
     </div>
 
