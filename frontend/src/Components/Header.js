@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import React from 'react'
+import './Header.css'
 
 const Header = () => (
-    <div>
-        <h1>React Fetch Demo</h1>
+    <div className='header'>
+        <h2>Jac Enterprises Mystery Educator </h2>
         <ul>
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/javengers'>Javengers</NavLink>
