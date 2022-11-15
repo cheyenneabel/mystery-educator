@@ -5,8 +5,8 @@ const Header = () => (
     <div>
         <h1>React Fetch Demo</h1>
         <ul>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/users'>Users</NavLink>
+      
+
         </ul>
     </div>
     

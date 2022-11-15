@@ -18,6 +18,7 @@ const PageSwitch = () => {
             */}
 
             <Route exact path = "/javengers" component={JavengersContactPage} />
+            <Route exact path = "/jacContact" component={jacContactPage} />
 
         </Switch>
     )
