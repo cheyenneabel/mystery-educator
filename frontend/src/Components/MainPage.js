@@ -1,10 +1,24 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import './MainPage.css';
 
 const MainPage = () => (
-<h3>Welcome to the Main Page </h3>
+    <section className="mainPage">
+        <h3 id="welcomeMessage">Welcome to the Main Page </h3>
+
+        <NavLink id='cryptid' to='/cryptid'>Cryptids</NavLink>
+
+        <NavLink id='bored' to='/bored'>BoredAPI</NavLink>
+
+        <div id="toRemoveWhenMetMuseumIsAdded"></div>
+        {/* <NavLink to='/metmuseum'></NavLink> */}
+
+        <NavLink id='javengers' to='/javengers'>Javengers</NavLink>
+
+        <div id='jac'></div>
+
+    </section>
+
 )
 
 export default MainPage
-
-
-// Tyrique Test
