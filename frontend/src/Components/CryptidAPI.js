@@ -8,7 +8,7 @@ const Cryptid = () => {
         fetch('http://localhost:8080/random/cryptid')
         .then((response) => response.json())
         .then((json) => setCreature(json))
-    })
+    }, [])
     if(creature){
         var loading = false
     }
