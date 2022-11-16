@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 
 const MetMuseumAPI = () => {
 
-    const [artwork, setArtwork] = useState(null);
+    const [artwork, setArtwork] = useState({});
 
     useEffect(() => {
-        fetch('https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&isOnView=true&q=mythology')
+        fetch('https://collectionapi.metmuseum.org/public/collection/v1/objects/10499')
         .then((response) => response.json())
         .then((json) => setArtwork(json));
     
     }, [])
 
-    if(activity){
+    if(artwork){
         var loading = false
         }
     return (
