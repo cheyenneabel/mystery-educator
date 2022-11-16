@@ -1,12 +1,16 @@
 .footer{
     color:rgb(10, 8, 8);
-    border-style: solid;
+    /* border-style: solid; */
+    margin:2%;
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif;
+    text-align: left;
    
 }
  a:hover{
     color: orange;
 }
-
+/* 
 .jacContact{
-    color: rgb(225, 225, 235);
-}
+    color: rgb(28, 28, 156);
+} */
