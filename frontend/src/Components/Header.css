@@ -19,6 +19,7 @@ ul a{
     min-width: 75px;
     padding: 2px;
     text-decoration: none;
+    color: white;
 }
 
 ul a:hover{

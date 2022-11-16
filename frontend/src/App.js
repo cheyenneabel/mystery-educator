@@ -5,11 +5,13 @@ import Footer from './Components/Footer.js'
 import Header from './Components/Header.js';
 import PageSwitch from './PageSwitch.js';
 
+
 function App() {
   return (
 
     <div className="App">
-
+      
+      
       <BrowserRouter>
 
           <Header/>
@@ -20,6 +22,7 @@ function App() {
 
           <Footer /> 
           
+
         </BrowserRouter>
     </div>
 
