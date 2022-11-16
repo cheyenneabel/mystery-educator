@@ -8,7 +8,7 @@ import './Footer.css'
 // }
 const Footer = () => {
    
-    return(<div>
+    return(<div className="footer">
        {/* <input type="button" value="create page" onClick={change_page}/>*/}
        <NavLink to='/jacContact'> Contact Us </NavLink>
         <small>&copy; javengers 2022 </small>
