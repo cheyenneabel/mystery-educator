@@ -35,7 +35,7 @@ const AboutPage = () => (
     <div className="column">
       <img
         src="/images/TyriquesPicture - Copy.jpg"
-        className="tyriques-img"></img>
+        className="tyriques-img"> className="Tyriques"</img>
       <h4>Tyriques Simpson</h4>
       <p>
         A full-stack java developer. Proficient in Java, JavaScript, css and
