@@ -15,7 +15,7 @@ const MainPage = () => (
 
         <NavLink id='javengers' to='/javengers'>Javengers</NavLink>
 
-        <div id='jac'></div>
+        <NavLink id='jac' to='/jacContact'>Jac Enterprises</NavLink>
 
     </section>
 
