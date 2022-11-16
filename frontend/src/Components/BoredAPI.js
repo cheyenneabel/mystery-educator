@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import './Bored.css';
+
 
  const BoredAPI = () =>{
     const[activity, setActivity] = useState({});
@@ -16,28 +18,29 @@ import React, { useState, useEffect } from "react";
         }
     return(
         <div>
-            <p>BoredAPI</p>
+            <h2>Bored API</h2>
             {
                 (loading ? <h3>Loading...</h3> : (
-                    <div>
-                        <h3>
+                    <div id='boredActivityArea'>
+                        <h1 id='boredActivity'>
                         {activity.activity}
-                        </h3>
+                        </h1>
                         <p>
-                            {activity.type}
+                            Type: {activity.type}
                         </p>
                         <p>
-                            {activity.participants}
+                            Participants: {activity.participants}
                         </p>
                         <p>
-                            {activity.price}
+                            Price Index: {activity.price}
                         </p>
                         <p>
-                            {activity.key}
+                            Accessibility Index: {activity.accessibility}
                         </p>
                         <p>
-                            {activity.accessibility}
+                            Bored API Key:{activity.key}
                         </p>
+
                         {/* {
                             if(activity.link !== null){
                                 <a href ={`${activity.link}`} ></a>

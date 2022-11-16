@@ -34,14 +34,13 @@
 #bored{
     grid-column: 3/5;
 }
-/* change when Met Museum is added */
-#toRemoveWhenMetMuseumIsAdded{
+#museum{
     grid-column: 5/7;
 }
 #javengers{
     grid-column: 2/4;
 }
-/* change when Jac Contact is added */
+
 #jac{
     grid-column: 4/6;
 }
