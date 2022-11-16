@@ -3,7 +3,7 @@ import './JacContact.css'
 
 
 const jacContactPage = () => (
-  <div>
+  <div className="JacContact">
  { // <!DOCTYPE html>
   // <html lang="en">
   // <head>
