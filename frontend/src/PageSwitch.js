@@ -4,6 +4,7 @@ import MainPage from './Components/MainPage';
 import BoredAPI from './Components/BoredAPI';
 import Cryptid from './Components/CryptidAPI';
 import JavengersContactPage from './Components/JavengersContactPage';
+import AboutPage from './Components/AboutPage';
 
 
 //import all components (minus header and footer)
@@ -22,6 +23,7 @@ const PageSwitch = () => {
             */}
             
             <Route exact path = "/javengers" component={JavengersContactPage} />
+            <Route exact path="/aboutus" component={AboutPage}/>
 
         </Switch>
     )
