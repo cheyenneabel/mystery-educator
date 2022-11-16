@@ -1,6 +1,7 @@
 .header{
     display:flex;
     justify-content: space-between;
+    background-color: #008083;
 }
 
 ul{
@@ -19,7 +20,6 @@ ul a{
     min-width: 75px;
     padding: 2px;
     text-decoration: none;
-    color: white;
 }
 
 ul a:hover{

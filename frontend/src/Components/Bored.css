@@ -1,0 +1,12 @@
+#boredActivityArea{
+    display: grid;
+    grid-template-rows: repeat(5, 4rem);
+    grid-template-columns: 1fr 1fr;
+   
+}
+#boredActivity{
+    grid-row: 1/6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

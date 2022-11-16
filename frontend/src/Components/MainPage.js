@@ -10,12 +10,11 @@ const MainPage = () => (
 
         <NavLink id='bored' to='/bored'>BoredAPI</NavLink>
 
-        <div id="toRemoveWhenMetMuseumIsAdded"></div>
-        {/* <NavLink to='/metmuseum'></NavLink> */}
+        <NavLink id='museum' to='/museum'>MetMuseumAPI</NavLink>
 
         <NavLink id='javengers' to='/javengers'>Javengers</NavLink>
 
-        <div id='jac'></div>
+        <NavLink id='jac' to='/jacContact'>Jac Enterprises</NavLink>
 
     </section>
 

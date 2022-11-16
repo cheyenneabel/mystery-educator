@@ -3,7 +3,7 @@ import './JacContact.css'
 
 
 const jacContactPage = () => (
-  <div>
+  <div className="JacContact">
  { // <!DOCTYPE html>
   // <html lang="en">
   // <head>
@@ -69,7 +69,7 @@ const jacContactPage = () => (
                           <img src="./assets/images/fiji-islands.jpg" alt="" srcset=""></img>
                           <div class="card-content">
                               <h3 class="card-title">Skip 2 My Cay!&#8482;</h3>
-                              <p>What's the fun in just exploring that single island you flew into?!  Why not explore a subset of that island's chain? so just take the opportunity to...Skip to My Cay!&#8482</p>
+                              <p>What's the fun in just exploring that single island you flew into?!  Why not explore a subset of that island's chain? so just take the opportunity to...Skip to My Cay!&#8482;</p>
                           </div>
                       </div>
                   </li>
