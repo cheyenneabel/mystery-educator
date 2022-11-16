@@ -1,51 +1,47 @@
-
-
 .aboutUs{
-     display:flex;
-    position: relative;
-    margin:0 auto;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /* align-items: center; */
-    background-color: rgb(121, 163, 175);
-    /* filter: invert(100%) sepia(50%)  */
+    display:flex;
+   position: relative;
+   margin:0 auto;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   /* align-items: center; */
+   background-color: rgb(121, 163, 175);
+   /* filter: invert(100%) sepia(50%)  */
+ 
+    
+ } 
   
-     
-  } 
-   
 
 .aboutUs .column{
-    position: relative;
-    bottom: 0;
-    /* background: rgb(0,0,0); */
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 30%;
-    height: 40%;
-    padding: 1px;
-    box-sizing: border-box;
-    border-radius: 10px;
+   position: relative;
+   bottom: 0;
+   /* background: rgb(0,0,0); */
+   background: rgba(0, 0, 0, 0.5);
+   color: #f1f1f1;
+   width: 30%;
+   height: 40%;
+   padding: 1px;
+   box-sizing: border-box;
+   border-radius: 10px;
 }
-.column .prabesh-img{
-    width: 140px;
-    height: 219px;
+.prabesh-img{
+   width: 140px;
+   height: 219px;
 }
-.Cheyenne{
-    height: 255px;
-    width: 300px;
+.Cheyenne-img{
+   height: 255px;
+   width: 300px;
 }
 .tyriques-img{
-    width: 260px;
-    height: 330px;
+   width: 260px;
+   height: 330px;
 }
-.will{
-    width: 300px;
-    height: 245px;
+.will-img{
+   width: 300px;
+   height: 245px;
 }
 
-.thanaa{
-    width: 300px;
-    height: 300px;
+.thanaa-img{
+   width: 300px;
+   height: 300px;
 }
- 
- 
