@@ -11,8 +11,6 @@ const MetMuseumAPI = () => {
     
     }, [])
 
-    //variable handles one object. each function handles each variable.
-
     if(artwork){
         var loading = false
         }
@@ -29,13 +27,16 @@ const MetMuseumAPI = () => {
                             <img src={artwork.primaryImage} width="" height="" alt="artImage"/>
                         </p>
                         <p>
-                            The artist's name is: {artwork.artistDisplayName}
+                            The artist's name, if we know it, is: {artwork.artistDisplayName}
+                        </p>
+                        <p>
+                            This art is from: {artwork.culture}
                         </p>
                         <p>
                            This piece was created in the year {artwork.objectBeginDate} 
                         </p>
                         <p>
-                            <a href={artwork.objectURL}>Click here for more info about this piece of art</a>
+                            <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>
                         </p>
                     </div>
                 ))
