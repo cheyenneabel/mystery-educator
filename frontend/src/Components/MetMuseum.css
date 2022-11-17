@@ -25,12 +25,15 @@
   
   margin: 1% 40% 1% 10%;
   border-radius: 50px;
-  
+  background-color:#FAAB36;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .Words button:hover{
-  background-color: orange;
+  background-color: aquamarine;
   transition: .25s;
+  font-weight: bolder;
 }
 .artworkTitle{
   display: flex;
