@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import './MetMuseum.css'
 
 const MetMuseumAPI = () => {
 
@@ -18,6 +18,7 @@ const MetMuseumAPI = () => {
                 .then((json) => setArtwork(json));
 
             })
+
     }, [])
 
 
@@ -31,23 +32,24 @@ const MetMuseumAPI = () => {
             
             <p>"{artwork.title}"</p>
                 
-            <p>
-                <img src={artwork.primaryImage} width="" height="" alt="artImage"/>
-            </p>
-            <p>
+            <img className="Picture" src={artwork.primaryImage} width="" height="" alt="artImage"/>
+            
+            <div className="Words">
+                <p>
                 The artist's name, if we know it, is: {artwork.artistDisplayName}
-            </p>
-            <p>
+                </p>
+                <p>
                This art is from: {artwork.culture}
-            </p>
-            <p>
+                </p>
+                <p>
                 This piece was created in the year {artwork.objectBeginDate} 
-            </p>
-            <p>
+                </p>
+                <p>
                 <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>
-            </p>
+                </p>
 
-            <button onClick={() => window.location.reload(true)}>Another Piece of Art</button>
+                <button onClick={() => window.location.reload(true)}>Another Piece of Art</button>
+            </div>
 
         </div>
     )

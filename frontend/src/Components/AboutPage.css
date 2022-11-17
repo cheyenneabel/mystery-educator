@@ -23,25 +23,28 @@
    padding: 1px;
    box-sizing: border-box;
    border-radius: 10px;
+   margin-bottom: 60px;
 }
 .prabesh-img{
    width: 140px;
-   height: 219px;
+   height: 200px;
 }
-.Cheyenne-img{
-   height: 255px;
+.cheyenne-img{
    width: 300px;
+   height: 235px;
 }
 .tyriques-img{
    width: 260px;
-   height: 330px;
+   height: 340px;
 }
 .will-img{
    width: 300px;
-   height: 245px;
+   height: 255px;
 }
 
 .thanaa-img{
    width: 300px;
-   height: 300px;
+   height: 340px;
+
 }
+
