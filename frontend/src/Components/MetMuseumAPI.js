@@ -30,25 +30,24 @@ const MetMuseumAPI = () => {
         <div>
             <h2>Art Around the World</h2>
             
-            <p>"{artwork.title}"</p>
+            <h1 className="artworkTitle">"{artwork.title}"</h1>
+            <div className="Words">    
+                <img className="Picture" src={artwork.primaryImage} width="" height="" alt="artImage"/>
                 
-            <img className="Picture" src={artwork.primaryImage} width="" height="" alt="artImage"/>
-            
-            <div className="Words">
                 <p>
-                The artist's name, if we know it, is: {artwork.artistDisplayName}
+                    The artist's name, if we know it, is: {artwork.artistDisplayName}
                 </p>
                 <p>
-               This art is from: {artwork.culture}
+                This art is from: {artwork.culture}
                 </p>
                 <p>
-                This piece was created in the year {artwork.objectBeginDate} 
+                    This piece was created in the year: {artwork.objectBeginDate} 
                 </p>
                 <p>
-                <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>
+                    <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>
                 </p>
 
-                <button onClick={() => window.location.reload(true)}>Another Piece of Art</button>
+                <button onClick={() => window.location.reload(true)}>Another</button>
             </div>
 
         </div>

@@ -1,14 +1,19 @@
 .footer{
+    display:flex;
     color:rgb(10, 8, 8);
     /* border-style: solid; */
     margin:2%;
     font-size: larger;
     font-family:'Times New Roman', Times, serif;
     text-align: left;
-   
+    justify-content: space-between;
+    position:relative;
+    bottom:0;
+    left:0;
 }
  a:hover{
-    color: orange;
+    color: #FAAB36;
+    font-weight: bolder;
 }
 /* 
 .jacContact{

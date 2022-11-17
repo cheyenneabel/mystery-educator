@@ -1,7 +1,8 @@
 .header{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #008083;
+    margin: -0.5rem -0.5rem;
 }
 
 ul{
@@ -14,6 +15,7 @@ ul a{
     align-items: center;
     justify-content: center;
 
+    background-color: #FAAB36;
     border:1px solid black;
     border-radius: 75px;
     margin: 10px;
@@ -23,6 +25,6 @@ ul a{
 }
 
 ul a:hover{
-    background-color: orange;
+    background-color: aquamarine;
     transition: .25s;
 }

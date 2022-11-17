@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import MainPage from './Components/MainPage';
 import BoredAPI from './Components/BoredAPI';
 import Cryptid from './Components/CryptidAPI';
-import JavengersContactPage from './Components/JavengersContactPage';
 import AboutPage from './Components/AboutPage';
 
 import MetMuseumAPI from './Components/MetMuseumAPI';
