@@ -26,6 +26,9 @@ class BoredAPI extends React.Component{
         .then((response) => response.json())
         .then((json) => {this.setState({activity: json}); console.log(json)});
         this.setState({randomActivityBtnClicked: true})
+        this.setState({activityByParticipantsBtnClicked: false})
+        this.setState({activityByTypeBtnClicked: false})
+
     }
 // handle type change
     handleTypeChange(e){
@@ -40,7 +43,9 @@ class BoredAPI extends React.Component{
         fetch(`http://www.boredapi.com/api/activity/?type=${this.state.activityType}`)
         .then((response) => response.json())
         .then((json) => this.setState({activity: json}));
-        this.setState({randomActivityBtnClicked: true})
+        this.setState({activityByTypeBtnClicked: true})
+        this.setState({activityByParticipantsBtnClicked: false})
+        this.setState({randomActivityBtnClicked: false})
     }
 // handle activity by participants change
     handleParticipantsChange(e){
@@ -56,6 +61,8 @@ class BoredAPI extends React.Component{
         .then((response) => response.json())
         .then((json) => {this.setState({activity: json}); console.log(json)});
         this.setState({activityByParticipantsBtnClicked: true})
+        this.setState({activityByTypeBtnClicked: false})
+        this.setState({randomActivityBtnClicked: false})
     }
 
     render(){
