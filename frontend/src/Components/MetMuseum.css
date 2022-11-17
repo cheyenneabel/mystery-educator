@@ -1,0 +1,18 @@
+/* img {
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+} */
+.Picture{
+  width: 500px;
+  height: 500px;
+  grid-row: 1/6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Words{
+  display: grid;
+  grid-template-rows: repeat(5, 4rem);
+  grid-template-columns: 1fr 1fr;
+}

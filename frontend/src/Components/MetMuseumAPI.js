@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import './MetMuseum.css'
 
 const MetMuseumAPI = () => {
 
@@ -36,8 +37,10 @@ const MetMuseumAPI = () => {
             <p>"{artwork.title}"</p>
                 
             <p>
-                <img src={artwork.primaryImage} width="" height="" alt="artImage"/>
+                <img className="Picture" src={artwork.primaryImage} width="" height="" alt="artImage"/>
             </p>
+            
+            <div className="Words">
             <p>
                 The artist's name, if we know it, is: {artwork.artistDisplayName}
             </p>
@@ -52,7 +55,7 @@ const MetMuseumAPI = () => {
             </p>
 
             <button onClick={() => window.location.reload(true)}>Another</button>
-
+            </div>
         </div>
 
     )
