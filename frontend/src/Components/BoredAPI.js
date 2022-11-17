@@ -1,56 +1,201 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './Bored.css';
 
-
- const BoredAPI = () =>{
-    const[activity, setActivity] = useState({});
-    //const[loading, setLoading] = useState(true); // DO NOT DO
-    useEffect(() =>{
+class BoredAPI extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            activity: {},
+            activityType: "",
+            activityParticipants: 0,
+            randomActivityBtnClicked: false,
+            activityByTypeBtnClicked: false,
+            activityByParticipantsBtnClicked: false
+        }
+        this.handleRandomActivity = this.handleRandomActivity.bind(this);
+        this.handleTypeChange = this.handleTypeChange.bind(this);
+        this.handleType = this.handleType.bind(this);
+        this.handleParticipantsChange = this.handleParticipantsChange.bind(this);
+        this.handleParticipants = this.handleParticipants.bind(this);
+    }
+// handle a random activity
+    handleRandomActivity(e){
+        e.preventDefault();
+        console.log("Hello")
         fetch('https://www.boredapi.com/api/activity')
         .then((response) => response.json())
-        .then((json) => setActivity(json));    
-    }, [])
-    
-    if(activity){
-        //setLoading(() => { return false;}); // DO NOT DO
-        // console.log(activity)
-        var loading = false
-        }
-    return(
-        <div>
-            <h2>Goodbye, Boredom</h2>
-            {
-                (loading ? <h3>Loading...</h3> : (
-                    <div id='boredActivityArea'>
-                        <h1 id='boredActivity'>
-                        {activity.activity}
-                        </h1>
-                        <p>
-                            Type: {activity.type}
-                        </p>
-                        <p>
-                            Participants: {activity.participants}
-                        </p>
-                        <p>
-                            Price Index: {activity.price}
-                        </p>
-                        <p>
-                            Accessibility Index: {activity.accessibility}
-                        </p>
-                        <p>
-                            Bored API Key:{activity.key}
-                        </p>
+        .then((json) => {this.setState({activity: json}); console.log(json)});
+        this.setState({randomActivityBtnClicked: true})
+    }
+// handle type change
+    handleTypeChange(e){
+        e.preventDefault();
+        console.log("Type chaNGE")
+        this.setState({activityType: e.target.value})
+    }
+// handle activity by type btn
+    handleType(e){
+        e.preventDefault();
+        console.log("TypeBTN")
+        fetch(`http://www.boredapi.com/api/activity/?type=${this.state.activityType}`)
+        .then((response) => response.json())
+        .then((json) => this.setState({activity: json}));
+        this.setState({randomActivityBtnClicked: true})
+    }
+// handle activity by participants change
+    handleParticipantsChange(e){
+        e.preventDefault();
+        console.log("PARTICIPANTS CHANGE")
+        this.setState({activityParticipants: e.target.value})
+    }
+// handle activity by participants btn
+    handleParticipants(e){
+        e.preventDefault();
+        console.log("PARTICIPANTS BUTTON")
+        fetch(`http://www.boredapi.com/api/activity?participants=${this.state.activityParticipants}`)
+        .then((response) => response.json())
+        .then((json) => {this.setState({activity: json}); console.log(json)});
+        this.setState({activityByParticipantsBtnClicked: true})
+    }
 
-                        {/* {
-                            if(activity.link !== null){
-                                <a href ={`${activity.link}`} ></a>
-                            }
-                        } */}
-                        
-                    </div>
-                ))
+    render(){
+        return(
+            <div>
+                <h2> Bored API</h2>
+            {/* ----------------------------------- Random Activity ----------------------------- */}
+            <h3>Here is a random Activity</h3>
+                <button id="random-activity" onClick={this.handleRandomActivity}> Random Activity </button>
+                { // handling a single random activity fetch request
+                    (
+                        !this.state.randomActivityBtnClicked ? <p> </p> : (
+                        <div id='boredActivityArea'>
+                            <h1 id='boredActivity'>
+                                { this.state.activity.activity }
+                            </h1>
+                            <p>
+                                Type: { this.state.activity.type }
+                            </p>
+                            <p>
+                                Participants: { this.state.activity.participants }
+                            </p>
+                            <p>
+                                Price Index: { this.state.activity.price }
+                            </p>
+                            <p>
+                                Accessibility Index: { this.state.activity.accessibility }
+                            </p>
+                            <p>
+                                {
+                                    (
+                                        !this.state.activity.link  ? <span> </span> : (
+                                        <a href={`${this.state.activity.link}`}>Link</a>
+                                        )
+                                    )
+                                }
+                            </p>
+                        </div>
+                        )
+                    )
+                }
+            {/* ----------------------------------- Random Activity By Type ----------------------------- */}
+            <h3> Try to find an activity by type...</h3>
+            <form onSubmit={this.handleType}>
+                    <select id="select-type" onChange={this.handleTypeChange}>
+                        <option value="selection" selected disabled> Select a Type </option>
+                        <option value="education">Education</option>
+                        <option value="recreational">Recreational</option>
+                        <option value="social">Social</option>
+                        <option value="diy">DIY</option>
+                        <option value="charity">Charity</option>
+                        <option value="cooking">Cooking</option>
+                        <option value="relaxation">Relaxation</option>
+                        <option value="music">Music</option>
+                        <option value="busywork">Busywork</option>
+                    </select>
+                    <input type= "submit" value = "See Activity"></input>
+                </form>
+            { // handling activity by type fetch request
+                (
+                    !this.state.activityByTypeBtnClicked ? <p> </p> : (
+                        <div id='boredActivityArea'>
+                            <h1 id='boredActivity'>
+                                { this.state.activity.activity }
+                            </h1>
+                            <p>
+                                Type: { this.state.activity.type }
+                            </p>
+                            <p>
+                                Participants: { this.state.activity.participants }
+                            </p>
+                            <p>
+                                Price Index: { this.state.activity.price }
+                            </p>
+                            <p>
+                                Accessibility Index: { this.state.activity.accessibility }
+                            </p>
+                            <p>
+                                {
+                                    (
+                                        !this.state.activity.link  ? <span> </span> : (
+                                        <a href={`${this.state.activity.link}`}>Link</a>
+                                        )
+                                    )
+                                }
+                            </p>
+                        </div>
+                    )
+                )
             }
+            {/* ----------------------------------- Random Activity By Participants ----------------------------- */}
+            <h3> Try to find an activity by number of participants...</h3>
+            <form onSubmit={this.handleParticipants}>
+                    <select id="select-participants" onChange={this.handleParticipantsChange}>
+                        <option value="selection" selected disabled> Select number of participants... </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="8">8</option>
+                    </select>
+                    <input type= "submit" value = "See Activity"></input>
+                </form>
+            { // handling activity by participants fetch request
+                (
+                    !this.state.activityByParticipantsBtnClicked ? <p> </p> : (
+                        <div id='boredActivityArea'>
+                            <h1 id='boredActivity'>
+                                { this.state.activity.activity }
+                            </h1>
+                            <p>
+                                Type: { this.state.activity.type }
+                            </p>
+                            <p>
+                                Participants: { this.state.activity.participants }
+                            </p>
+                            <p>
+                                Price Index: { this.state.activity.price }
+                            </p>
+                            <p>
+                                Accessibility Index: { this.state.activity.accessibility }
+                            </p>
+                            <p>
+                                {
+                                    (
+                                        !this.state.activity.link  ? <span> </span> : (
+                                        <a href={`${this.state.activity.link}`}>Link</a>
+                                        )
+                                    )
+                                }
+                            </p>
+                        </div>
+                    )
+                )
+            }
+
         </div>
-    )
- }
+        )
+        
+    }
+}
  export default BoredAPI;
