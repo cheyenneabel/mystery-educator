@@ -30,7 +30,7 @@ const MetMuseumAPI = () => {
         <div>
             <h2>Art Around the World</h2>
             
-            <p>"{artwork.title}"</p>
+            <h1 className="artworkTitle">"{artwork.title}"</h1>
             <div className="Words">    
                 <img className="Picture" src={artwork.primaryImage} width="" height="" alt="artImage"/>
                 
@@ -41,7 +41,7 @@ const MetMuseumAPI = () => {
                 This art is from: {artwork.culture}
                 </p>
                 <p>
-                    This piece was created in the year {artwork.objectBeginDate} 
+                    This piece was created in the year: {artwork.objectBeginDate} 
                 </p>
                 <p>
                     <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>

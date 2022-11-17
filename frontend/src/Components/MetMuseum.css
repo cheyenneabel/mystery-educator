@@ -12,15 +12,15 @@
 .Picture{
   max-width: 500px;
   max-height: 500px;
-  grid-row: 1/6;
+  grid-row: 1/5;
   display: flex;
-  margin: 1rem 1rem;
-  /* align-items: center;
-  justify-content: center; */
+  margin: 0 1rem;
+  justify-content: right;
+  /*justify-content: center; */
 }
 
 .Words button{
-  grid-row-start: 6;
+  grid-row-start: 5;
   grid-column-start: 1;
   
   margin: 1% 40% 1% 10%;
@@ -31,4 +31,8 @@
 .Words button:hover{
   background-color: orange;
   transition: .25s;
+}
+.artworkTitle{
+  display: flex;
+  justify-content: center;
 }

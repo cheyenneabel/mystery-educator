@@ -7,7 +7,7 @@ const Header = () => (
         <h2>Jac Enterprises Mystery Educator </h2>
         <ul>
             <NavLink to='/'>Home</NavLink>
-            <NavLink to='/aboutus'>Javengers</NavLink>
+            <NavLink to='/javengers'>Javengers</NavLink>
         </ul>
     </div>
     

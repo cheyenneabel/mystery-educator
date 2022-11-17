@@ -12,7 +12,8 @@
     left:0;
 }
  a:hover{
-    color: orange;
+    color: #FAAB36;
+    font-weight: bolder;
 }
 /* 
 .jacContact{
