@@ -1,3 +1,4 @@
+
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './Components/Footer.js'
@@ -5,16 +6,14 @@ import Header from './Components/Header.js';
 import PageSwitch from './PageSwitch.js';
 
 
+
 function App() {
   return (
-
     <div className="App">
       
       
       <BrowserRouter>
-
-          <Header/>
-
+        <Header/>
           <div className="page">
             <PageSwitch />
           </div>
@@ -24,8 +23,7 @@ function App() {
 
         </BrowserRouter>
     </div>
-
   );
 }
-
 export default App;
+

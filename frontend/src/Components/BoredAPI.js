@@ -18,7 +18,7 @@ import './Bored.css';
         }
     return(
         <div>
-            <h2>Bored API</h2>
+            <h2>Goodbye, Boredom</h2>
             {
                 (loading ? <h3>Loading...</h3> : (
                     <div id='boredActivityArea'>

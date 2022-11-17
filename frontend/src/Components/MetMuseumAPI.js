@@ -18,11 +18,7 @@ const MetMuseumAPI = () => {
                 .then((json) => setArtwork(json));
 
             })
-            
-        
-    
     }, [])
-
 
 
     if(artwork){
@@ -31,7 +27,7 @@ const MetMuseumAPI = () => {
 
     return (
         <div>
-            <h3>MetMuseumAPI</h3>
+            <h2>Art Around the World</h2>
             
             <p>"{artwork.title}"</p>
                 
@@ -51,10 +47,9 @@ const MetMuseumAPI = () => {
                 <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>
             </p>
 
-            <button onClick={() => window.location.reload(true)}>Another</button>
+            <button onClick={() => window.location.reload(true)}>Another Piece of Art</button>
 
         </div>
-
     )
 }
             

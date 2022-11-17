@@ -3,6 +3,9 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 3fr 3fr;
 }
+body{
+    background-color: #249EA0;
+}
 
 #welcomeMessage{
     grid-column: 1/7;
@@ -21,6 +24,7 @@
     min-width: 75px;
     padding: 2px;
     text-decoration: none;
+    background-color: #FAAB36;
 }
 
 .mainPage a:hover{
