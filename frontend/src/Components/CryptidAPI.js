@@ -54,6 +54,7 @@ class CryptidAPI extends React.Component{
     render(){
         return(
             <div>
+                <h2>Cryptid Corner</h2>
             {/* -----------------------------------Single Random Cryptid ----------------------------- */}
                 <h3>Here is a random Cryptid that you might be interested in</h3>
                 <button id="random-cryptid" onClick={this.handleRandomCryptid}> Random Cryptid </button>
