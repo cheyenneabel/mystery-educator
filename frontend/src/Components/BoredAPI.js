@@ -35,7 +35,8 @@ import './Bored.css';
                             Price Index: {activity.price}
                         </p>
                         <p>
-                            Accessibility Index: {activity.accessibility}
+                            Accessi
+                            bility Index: {activity.accessibility}
                         </p>
                         <p>
                             Bored API Key:{activity.key}
