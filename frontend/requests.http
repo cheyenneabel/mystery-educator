@@ -1,8 +1,11 @@
 ###
-GET https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&isOnView=true&q=mythology&limit=50
+GET https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&isOnView=true&q=mythology
 
 ###
-GET https://collectionapi.metmuseum.org/public/collection/v1/objects/65576
+GET https://collectionapi.metmuseum.org/public/collection/v1/objects/558682
+
+###
+GET https://www.metmuseum.org/art/collection/search/558682
 
 
 
