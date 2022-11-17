@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import './MetMuseum.css'
 
 const MetMuseumAPI = () => {
@@ -19,11 +18,8 @@ const MetMuseumAPI = () => {
                 .then((json) => setArtwork(json));
 
             })
-            
-        
-    
-    }, [])
 
+    }, [])
 
 
     if(artwork){
@@ -32,7 +28,7 @@ const MetMuseumAPI = () => {
 
     return (
         <div>
-            <h3>MetMuseumAPI</h3>
+            <h2>Art Around the World</h2>
             
             <p>"{artwork.title}"</p>
             <div className="Words">    
@@ -53,8 +49,8 @@ const MetMuseumAPI = () => {
 
                 <button onClick={() => window.location.reload(true)}>Another</button>
             </div>
-        </div>
 
+        </div>
     )
 }
             
