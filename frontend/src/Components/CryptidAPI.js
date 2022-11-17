@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 
 class CryptidAPI extends React.Component{
     constructor(props){
@@ -125,7 +125,4 @@ class CryptidAPI extends React.Component{
         )
     }
 }
-
-
-
 export default CryptidAPI;
