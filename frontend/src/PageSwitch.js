@@ -9,6 +9,7 @@ import AboutPage from './Components/AboutPage';
 import MetMuseumAPI from './Components/MetMuseumAPI';
 import jacContactPage from './Components/JacContactPage';
 
+
 //import all components (minus header and footer)
 
 const PageSwitch = () => { 
@@ -18,10 +19,12 @@ const PageSwitch = () => {
             <Route exact path = "/" component={MainPage} />
             <Route exact path = "/cryptid" component= {Cryptid} />
             <Route exact path = "/bored" component={BoredAPI} />
+
             <Route exact path = "/museum" component={MetMuseumAPI} />
-            <Route exact path = "/javengers" component={JavengersContactPage} />
-            <Route exact path="/aboutus" component={AboutPage}/>
+            <Route exact path = "/javengers" component={AboutPage} />
+            {/* <Route exact path="/aboutus" component={AboutPage}/> */}
             <Route exact path = "/jacContact" component={jacContactPage} />
+
 
         </Switch>
     )
