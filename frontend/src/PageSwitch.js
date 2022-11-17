@@ -22,7 +22,6 @@ const PageSwitch = () => {
 
             <Route exact path = "/museum" component={MetMuseumAPI} />
             <Route exact path = "/javengers" component={AboutPage} />
-            {/* <Route exact path="/aboutus" component={AboutPage}/> */}
             <Route exact path = "/jacContact" component={jacContactPage} />
 
 
