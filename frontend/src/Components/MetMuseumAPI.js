@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import './MetMuseum.css'
 
 const MetMuseumAPI = () => {
     const [artwork, setArtwork] = useState({});
@@ -24,8 +25,9 @@ const MetMuseumAPI = () => {
                             "{artwork.title}"
                         </h3>
                         <p>
-                            <img src={artwork.primaryImage} width="" height="" alt="artImage"/>
+                            <img className="Picture" src={artwork.primaryImage} width="" height="" alt="artImage"/>
                         </p>
+                      <div className="Words">  
                         <p>
                             The artist's name, if we know it, is: {artwork.artistDisplayName}
                         </p>
@@ -38,6 +40,7 @@ const MetMuseumAPI = () => {
                         <p>
                             <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>
                         </p>
+                        </div>
                     </div>
                 ))
             }
