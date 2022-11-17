@@ -26,7 +26,6 @@ class CryptidAPI extends React.Component{
         this.setState({randomCryptidBtnClicked: true})
         this.setState({allCryptidsBtnClicked: false})
         this.setState({cryptidByNameBtnClicked: false})
-
     }
 // Handling all Cryptids
     handleAllcryptids(){
