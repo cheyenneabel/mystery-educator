@@ -21,10 +21,9 @@ class BoredAPI extends React.Component{
 // handle a random activity
     handleRandomActivity(e){
         e.preventDefault();
-        console.log("Hello")
         fetch('https://www.boredapi.com/api/activity')
         .then((response) => response.json())
-        .then((json) => {this.setState({activity: json}); console.log(json)});
+        .then((json) => this.setState({activity: json}));
         this.setState({randomActivityBtnClicked: true})
         this.setState({activityByParticipantsBtnClicked: false})
         this.setState({activityByTypeBtnClicked: false})
@@ -33,13 +32,11 @@ class BoredAPI extends React.Component{
 // handle type change
     handleTypeChange(e){
         e.preventDefault();
-        console.log("Type chaNGE")
         this.setState({activityType: e.target.value})
     }
 // handle activity by type btn
     handleType(e){
         e.preventDefault();
-        console.log("TypeBTN")
         fetch(`http://www.boredapi.com/api/activity/?type=${this.state.activityType}`)
         .then((response) => response.json())
         .then((json) => this.setState({activity: json}));
@@ -50,16 +47,14 @@ class BoredAPI extends React.Component{
 // handle activity by participants change
     handleParticipantsChange(e){
         e.preventDefault();
-        console.log("PARTICIPANTS CHANGE")
         this.setState({activityParticipants: e.target.value})
     }
 // handle activity by participants btn
     handleParticipants(e){
         e.preventDefault();
-        console.log("PARTICIPANTS BUTTON")
         fetch(`http://www.boredapi.com/api/activity?participants=${this.state.activityParticipants}`)
         .then((response) => response.json())
-        .then((json) => {this.setState({activity: json}); console.log(json)});
+        .then((json) => this.setState({activity: json}));
         this.setState({activityByParticipantsBtnClicked: true})
         this.setState({activityByTypeBtnClicked: false})
         this.setState({randomActivityBtnClicked: false})
@@ -199,10 +194,8 @@ class BoredAPI extends React.Component{
                     )
                 )
             }
-
         </div>
-        )
-        
+        )    
     }
 }
- export default BoredAPI;
+export default BoredAPI;
