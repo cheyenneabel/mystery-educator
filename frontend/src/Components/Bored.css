@@ -2,7 +2,12 @@
     display: grid;
     grid-template-rows: repeat(5, 4rem);
     grid-template-columns: 1fr 1fr;
-   
+    margin: 0 15rem;
+}
+#boredActivityArea p{
+    display: flex;
+    justify-content: center;
+
 }
 #boredActivity{
     grid-row: 1/6;

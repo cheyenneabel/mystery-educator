@@ -6,10 +6,8 @@ const Header = () => (
     <div className='header'>
         <h2>Jac Enterprises Mystery Educator </h2>
         <ul>
-
             <NavLink to='/'>Home</NavLink>
-            <NavLink to='/javengers'>Javengers</NavLink>
-            <NavLink to='/aboutus'>About Us</NavLink>
+            <NavLink to='/aboutus'>Javengers</NavLink>
         </ul>
     </div>
     

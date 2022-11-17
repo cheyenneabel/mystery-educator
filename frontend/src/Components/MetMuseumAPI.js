@@ -35,26 +35,23 @@ const MetMuseumAPI = () => {
             <h3>MetMuseumAPI</h3>
             
             <p>"{artwork.title}"</p>
-                
-            <p>
+            <div className="Words">    
                 <img className="Picture" src={artwork.primaryImage} width="" height="" alt="artImage"/>
-            </p>
-            
-            <div className="Words">
-            <p>
-                The artist's name, if we know it, is: {artwork.artistDisplayName}
-            </p>
-            <p>
-               This art is from: {artwork.culture}
-            </p>
-            <p>
-                This piece was created in the year {artwork.objectBeginDate} 
-            </p>
-            <p>
-                <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>
-            </p>
+                
+                <p>
+                    The artist's name, if we know it, is: {artwork.artistDisplayName}
+                </p>
+                <p>
+                This art is from: {artwork.culture}
+                </p>
+                <p>
+                    This piece was created in the year {artwork.objectBeginDate} 
+                </p>
+                <p>
+                    <a href={artwork.objectURL} target="_blank">Click here to learn more about this piece of art</a>
+                </p>
 
-            <button onClick={() => window.location.reload(true)}>Another</button>
+                <button onClick={() => window.location.reload(true)}>Another</button>
             </div>
         </div>
 
