@@ -24,30 +24,32 @@ class CryptidAPI extends React.Component{
         .then((response) => response.json())
         .then((json) => this.setState({cryptid: json}))
         this.setState({randomCryptidBtnClicked: true})
+        this.setState({allCryptidsBtnClicked: false})
+        this.setState({cryptidByNameBtnClicked: false})
 
     }
 // Handling all Cryptids
     handleAllcryptids(){
-        console.log("hello")
         fetch('http://localhost:8080/cryptid')
         .then((response) => response.json())
         .then((json) => this.setState({cryptids: json}))
-
         this.setState({allCryptidsBtnClicked: true})
+        this.setState({randomCryptidBtnClicked: false})
+        this.setState({cryptidByNameBtnClicked: false})
     }
 // Handle a cryptid by id
     handleSingleCryptid(e){
         e.preventDefault()
-        console.log("submitbtn")
         fetch(`http://localhost:8080/cryptid/${this.state.cryptidId}`)
         .then((response) => response.json())
         .then((json) => this.setState({cryptid: json}));
         this.setState({cryptidByNameBtnClicked: true})
+        this.setState({randomCryptidBtnClicked: false})
+        this.setState({allCryptidsBtnClicked: false})
     }
 // Handle selection change in drop-down list
     handleChange(e){
         e.preventDefault();
-        console.log("Change")
         this.setState({cryptidId: e.target.value})
     }
 
